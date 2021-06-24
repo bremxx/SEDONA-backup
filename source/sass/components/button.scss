@@ -1,26 +1,6 @@
 .button {
   @include button-style;
 
-  &--booking {
-    padding-top: 15px;
-    padding-bottom: 17px;
-    background-color: $bg-second;
-    color: #ffffff;
-
-    &:hover {
-      background-color: $bg-hover;
-    }
-
-    &:active {
-      background-color: $bg-active;
-      color: rgba(225, 225, 225, 0.3);
-    }
-
-    &:disabled {
-      background-color: #e5e5e5;
-    }
-  }
-
   &--submit {
     padding-top: 18px;
     padding-bottom: 14px;
@@ -30,5 +10,17 @@
     @media (min-width: $tablet-width-min) {
       flex-basis: 50%;
     }
+  }
+
+  &--popup {
+    padding-top: 18px;
+    padding-bottom: 14px;
+    background-color: $bg-second;
+    color: #ffffff;
+  }
+
+  &--player {
+    line-height: 0;
+    background-color: transparent;
   }
 }

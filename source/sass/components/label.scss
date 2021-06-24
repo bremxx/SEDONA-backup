@@ -10,6 +10,7 @@
   &--selection {
     position: relative;
     margin-left: 80px;
+
     @include text-title;
     text-transform: none;
     cursor: pointer;
@@ -19,8 +20,9 @@
       content: "";
       width: 56px;
       height: 56px;
-      top: -15px;
+      top: 50%;
       left: -80px;
+      transform: translateY(-50%);
       background-color: $bg-field;
       border: 5px solid $bg-field;
 
@@ -33,6 +35,22 @@
       display: none;
       position: absolute;
       content: "";
+    }
+
+    &:hover {
+      &::before {
+        background-color: $form-interaction-color;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: #d5d5d5;
+      }
+
+      &::after {
+        opacity: 0.3;
+      }
     }
 
     @media (min-width: $tablet-width-min) {
@@ -55,6 +73,7 @@
     @media (min-width: $desktop-width-min) {
       margin: 0;
       margin-right: 16px;
+
       span {
         display: none;
       }

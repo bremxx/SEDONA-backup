@@ -4,10 +4,12 @@
   margin-bottom: 49px;
 
   @media (min-width: $tablet-width-min) {
+    padding: 0 60px;
     margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width-min) {
+    padding: 0 200px;
     margin-bottom: 85px;
   }
 }
@@ -18,27 +20,32 @@
 
   @media (min-width: $tablet-width-min) {
     max-width: 445px;
-    margin-top: 59px;
-    margin-bottom: 68px;
+    //*pixel-perfect
+    margin-top: 57px;
+    margin-bottom: 80px;
     padding: 0;
   }
 
   @media (min-width: $desktop-width-min) {
-    margin-top: 63px;
-    margin-bottom: 66px;
+    //*pixel-perfect
+    margin-top: 60px;
+    margin-bottom: 79px;
   }
 }
 
 .video__content {
-  margin: 0 auto;
+  display: flex;
+  line-height: 0;
 }
 
 .video__title {
   margin-top: 0;
-  margin-bottom: 27px;
+  //*pixel-perfect
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width-min) {
-    font-size: $size-wide-screen;
+    margin-bottom: 33px;
+    font-size: $font-size-wide-screen;
   }
 }
 
@@ -48,5 +55,49 @@
 
 .video__img {
   max-width: 100%;
-  height: auto;
+  flex-basis: 100%;
+  height: 201px;
+  background-image: url("../img/video-mobile@1x.jpg");
+  line-height: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #b89556;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    height: 500px;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width-min) {
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+}
+
+.video__player {
+  display: grid;
+  grid-template-rows: 45px 66px;
+  grid-template-columns: 1fr;
+  margin: -45px 20px 0;
+
+  @media (min-width: $tablet-width-min) {
+    display: flex;
+    align-items: center;
+    height: 93px;
+    margin: -93px 0 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }

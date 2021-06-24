@@ -17,6 +17,8 @@
 // global
 @import "layout/page.scss";
 @import "layout/page-header.scss";
+@import "layout/button-burger.scss";
+@import "layout/button-cross.scss";
 @import "layout/main-nav.scss";
 @import "layout/site-list.scss";
 @import "layout/page-main.scss";
@@ -40,16 +42,17 @@
 @import "layout/photo/photo-card.scss";
 @import "layout/photo/card-info.scss";
 @import "layout/photo/likes.scss";
-@import "layout/photo/likes-icon.scss";
 @import "layout/photo/video.scss";
+@import "layout/photo/player.scss";
 
 // form page
 @import "layout/form/review.scss";
 @import "layout/form/review-form.scss";
 @import "layout/form/form-group";
 @import "layout/form/field.scss";
+@import "layout/form/field-invalid.scss";
 @import "layout/form/field-icon.scss";
-@import "layout/form/checklist.scss";
+@import "layout/form/popup.scss";
 
 
 // COMPONENTS

@@ -15,7 +15,22 @@
 }
 
 .likes__icon {
+  margin-right: 14px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width-min) {
+    margin-right: 10px;
+  }
+}
+
+.likes__icon-img {
   width: 23px;
   height: 21px;
-  margin-right: 14px;
+
+  @media (min-width: $desktop-width-min) {
+    path {
+      opacity: 1;
+      fill: #ffffff;
+    }
+  }
 }
